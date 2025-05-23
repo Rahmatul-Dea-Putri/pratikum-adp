@@ -7,6 +7,7 @@ while True:
     elif m < n:
         print('\nJumlah persamaan < Jumlah variabel, maka SPL memiliki banyak solusi.\n')
     else:
+        print('\nJumlah persamaan = Jumlah variabel, maka SPL memiliki banyak solusi tunggal.\n')
         break
 
 matriks = []
