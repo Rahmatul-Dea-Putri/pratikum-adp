@@ -58,7 +58,7 @@ def animasi_istirahat(durasi_menit = 5 ) :
         else:
             motivasi = pesan_motivasi[1][sisa % 3]
         
-        if sisa == total_detik or sisa == total_detik - 1 or sisa == total_detik - 2 or sisa == total_detik - 3 or sisa == total_detik - 4:
+        if sisa == total_detik:
             threading.Thread(target=putar_suara).start()
 
         elif sisa in [4, 3, 2, 1, 0]:
@@ -92,7 +92,7 @@ def animasi_istirahat_panjang(durasi_menit = 15 ) :
         progres = int(((total_detik - sisa) / total_detik) * 30)
         bar = "[" + "■" * progres + "-" * (30 - progres) + "]"
         
-        if sisa == total_detik or sisa == total_detik - 1 or sisa == total_detik - 2 or sisa == total_detik - 3 or sisa == total_detik - 4:
+        if sisa == total_detik :
             threading.Thread(target = putar_suara).start()
 
         elif sisa in [4, 3, 2, 1, 0]:
