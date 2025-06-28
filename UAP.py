@@ -7,7 +7,7 @@ from plyer import notification
 
 os.system('cls')
 
-POMODORO_DURATION = 10 * 1  
+POMODORO_DURATION = 1500 * 1  
 
 histori_sesi = {
     "total_sesi": 0,
@@ -37,8 +37,8 @@ def putar_suara() :
     pygame.mixer.music.load("alarm.mp3")
     pygame.mixer.music.play()
 
-def animasi_istirahat(durasi_menit = 1 ) :
-    total_detik = durasi_menit * 60
+def animasi_istirahat(durasi_menit = 5 ) :
+    total_detik = int(durasi_menit * 60)
     ikon_nyantai = ["😴", "🛌", "☕", "🌙", "🧘"]  
     pesan_motivasi = [
         ["Tarik napas", "Fokus kembali", "Tenang"],
@@ -82,8 +82,8 @@ def animasi_istirahat(durasi_menit = 1 ) :
     print(colored("="*50,"magenta"))
     time.sleep(3)
 
-def animasi_istirahat_panjang(durasi_menit = 3 ) :
-    total_detik = durasi_menit * 60
+def animasi_istirahat_panjang(durasi_menit = 15 ) :
+    total_detik = int(durasi_menit * 60)
     ikon_jam = ["🕛", "🕐", "🕑", "🕒", "🕓", "🕔", "🕕", "🕖", "🕗", "🕘", "🕙", "🕚"]
     
     for sisa in range(total_detik, -1, -1):
