@@ -128,11 +128,13 @@ def pomodoro_sesi():
         if sesi % 4 == 0:
             print(colored("\n🌴 LONG BREAK","blue"))
             kirim_notif("Istirahat Panjang", "Saatnya istirahat panjang!")
+            time.sleep(2)
             animasi_istirahat_panjang()
 
         else:
             print(colored("\n🛋️ SHORT BREAK","blue"))
             kirim_notif("Istirahat", "Istirahat pendek dimulai!")
+            time.sleep(2)
             animasi_istirahat()
         
         berikutnya = input(colored("\n➡️  Lanjut ato ngga nih??? (iya dong/udah dulu deh): ","white")).lower()
